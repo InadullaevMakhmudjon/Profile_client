@@ -11,22 +11,28 @@
                                     .title.text-md-center.text-uppercase Loream Ipsum
                                     .subheading.text-md-center.grey--text.mt-3 {{ subheading }}
                                     transition(name="img" mode="out-in")
-                                        ImageHolder(v-if="login")
+                                        ImageHolder(v-if="islogin")
                                         RegisterImage(v-else)
                                 v-flex(xs12 sm8 md4).pa-3
                                     transition(name="fade" mode="out-in")
-                                        MemberLogin(v-if="login" :regbtn="()=> login = false")
-                                        MemberRegister(v-else :regbtn="()=> login = true")
+                                        MemberLogin(v-if="islogin" :login="login" :regbtn="()=> islogin = false")
+                                        MemberRegister(v-else :register="register" :regbtn="()=> islogin = true")
 </template>
 
 <script>
 export default {
   data() {
     return {
-      login: true,
+      islogin: true,
       color: this.$vuetify.theme.primary,
       subheading: 'Lorem ipsum dolor sit amet, ne minimum perpetua est, in maiorum vulputate mea. Mei sint case ei, congue mentitum inciderint an ius. Mel ex invidunt phaedrum. Dico eirmod praesent mel cu,',
     };
+  },
+  methods: {
+    login() {
+    },
+    register() {
+    },
   },
 };
 </script>
