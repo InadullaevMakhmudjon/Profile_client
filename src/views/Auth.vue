@@ -20,18 +20,34 @@
 </template>
 
 <script>
+import Auth from '../server/Auth';
+
 export default {
   data() {
     return {
+      user: {},
       islogin: true,
       color: this.$vuetify.theme.primary,
       subheading: 'Lorem ipsum dolor sit amet, ne minimum perpetua est, in maiorum vulputate mea. Mei sint case ei, congue mentitum inciderint an ius. Mel ex invidunt phaedrum. Dico eirmod praesent mel cu,',
     };
   },
   methods: {
-    login() {
+    login({ username, password }) {
+      Auth.login({ username, password })
+        .then((token) => {
+          this.$store.dispatch('setToken', { token });
+          this.$router.push({ name: 'home' });
+        })
+        .catch(err => console.log(`${err}`));
     },
-    register() {
+    register({
+      name, username, email, password,
+    }) {
+      Auth.register({
+        name, username, email, password,
+      }).then(() => {
+        this.islogin = true;
+      });
     },
   },
 };

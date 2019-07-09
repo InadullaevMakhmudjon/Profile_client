@@ -1,15 +1,9 @@
-import Api, { execute } from './Api';
+import Api, { execute, AXIOS } from './Api';
 
 export default {
-  about: () => new Promise((resolve, reject) => {
-    Api().get('/auth/').then((response) => {
-      resolve(response.data);
-    }).catch((err) => {
-      reject(new Error(`${err}`));
-    });
-  }),
+  about: () => execute(Api().get('auth/')),
   login: ({ username, password }) => new Promise((resolve, reject) => {
-    Api().post('/auth/login', { username, password })
+    AXIOS.post('/auth/login', { username, password })
       .then((response) => {
         resolve(response.data.token);
       }).catch((err) => {
@@ -18,7 +12,7 @@ export default {
   }),
   register: ({
     name, email, password, username,
-  }) => execute(Api().post('/auth/register', {
+  }) => execute(AXIOS.post('/auth/register', {
     name, email, password, username,
   })),
 };

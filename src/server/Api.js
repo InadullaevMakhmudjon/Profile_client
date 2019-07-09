@@ -10,15 +10,11 @@ export function execute(promise) {
   });
 }
 
-export const Axios = () => axios.create({
-  baseURL: 'http://192.168.0.103:3031/api',
-  defaults: {
-    headers: {
-      common: {
-        Authorization: `Bearer ${localStorage.getItem('token')}`,
-      },
-    },
-  },
+export const AXIOS = axios.create({
+  baseURL: 'http://localhost:3031/api/',
 });
 
-export default Axios;
+export default () => {
+  axios.defaults.headers.common.Authorization = `Bearer ${localStorage.getItem('token')}`;
+  return AXIOS;
+};
