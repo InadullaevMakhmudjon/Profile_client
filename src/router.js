@@ -7,6 +7,11 @@ Vue.use(Router);
 const router = new Router({
   routes: [
     {
+      path: '/secret/of/makhmudjon',
+      name: 'secret',
+      component: () => import('./views/Home.vue'),
+    },
+    {
       path: '/login',
       name: 'login',
       component: () => import('./views/Auth.vue'),
