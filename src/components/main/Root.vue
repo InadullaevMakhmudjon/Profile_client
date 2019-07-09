@@ -1,6 +1,6 @@
 <template lang="pug">
     div(:style="`background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(${url});`").pa-2.white--text
-        v-container.pa-5
+        v-container.pt-5.pl-5
             .subheading.grey--text.text--lighten-2 Доставка еды · {{ region }}
             .display-2 Быстрая доставка еды
             .display-2 в {{ region }}

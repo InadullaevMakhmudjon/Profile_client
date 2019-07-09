@@ -18,7 +18,7 @@
               v-list-tile-title.grey--text.text--darken-3.ml-4 {{ item.name }}
         v-btn(round medium outline color="grey").ml-2
           .black--text Войти
-      v-container.pa-2
+      v-container.pt-2
         router-view
 </template>
 
