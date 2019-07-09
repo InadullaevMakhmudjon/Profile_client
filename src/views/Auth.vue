@@ -36,7 +36,7 @@ export default {
       Auth.login({ username, password })
         .then((token) => {
           this.$store.dispatch('setToken', { token });
-          this.$router.push({ name: 'home' });
+          this.$router.push('/');
         })
         .catch(err => console.log(`${err}`));
     },

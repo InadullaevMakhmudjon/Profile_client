@@ -24,16 +24,14 @@ const router = new Router({
     },
     {
       path: '/',
-      name: 'home',
       meta: { requiresAuth: true },
       component: () => import('./views/Home.vue'),
       children: [
         {
           path: '',
-          name: 'Main',
           component: () => import('./views/Main.vue'),
-        }
-      ]
+        },
+      ],
     },
   ],
 });

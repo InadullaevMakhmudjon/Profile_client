@@ -16,8 +16,8 @@
           v-list
             v-list-tile(v-for="item in regions" :key="item.id" @click="region = item.name")
               v-list-tile-title.grey--text.text--darken-3.ml-4 {{ item.name }}
-        v-btn(round medium outline color="grey").ml-2
-          .black--text Войти
+        v-btn(round medium outline color="grey" to="logout").ml-2
+          .black--text Выход
       v-container.pt-2
         router-view
 </template>

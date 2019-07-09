@@ -7,8 +7,8 @@
             v-layout(row wrap).mt-4
               v-flex(xs9)
                 v-layout(row fill-height)
-                  v-text-field(label="Select" color="accent" solo clearable prepend-inner-icon="near_me").ma-0
-                  v-btn(depressed color="primary").accent--text.ma-0 Показать рестораны
+                    v-text-field(label="Укажите адрес доставки..." color="accent" solo clearable prepend-inner-icon="near_me").ma-0
+                    v-btn(depressed color="primary").accent--text.ma-0 Показать рестораны
 </template>
 
 <script>
@@ -27,3 +27,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+button {
+  height: 48px;
+}
+</style>

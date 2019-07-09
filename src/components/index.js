@@ -4,6 +4,7 @@ import RegisterImage from './auth/RegisterImage.vue';
 import MemberLogin from './auth/MemberLogin.vue';
 import MemberRegister from './auth/MemberRegister.vue';
 import Root from './main/Root.vue';
+import RootItem from './main/RootItem.vue';
 
 const Components = {
   MemberLogin,
@@ -11,6 +12,7 @@ const Components = {
   ImageHolder,
   RegisterImage,
   Root,
+  RootItem,
 };
 
 Object.keys(Components).forEach((name) => {

@@ -7,21 +7,28 @@
 }
 
 .link:hover {
-    color: #FFDD26;
+    color: var(--v-primary-base) !important;
     cursor: pointer;
 }
 
-.corner {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 60px;
-    height: 60px;
-    transform: rotate(45deg);
-    background: white;
+.highlite {
+    display: flex;
+    padding: 2px 12px;
+    background: var(--v-primary-base);
+    line-height: 22px;
+    border-radius: 99px;
 }
-.transparent{
-    background: transparent !important;
+
+.zoom {
+    transition: all 0.5s;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
+
+.hand:hover {
+    cursor: pointer;
 }
 
 ::-webkit-scrollbar {

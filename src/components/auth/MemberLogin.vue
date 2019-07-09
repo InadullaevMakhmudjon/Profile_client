@@ -44,7 +44,7 @@ export default {
         { name: 'Purple', color: '#9C27B0', border: '#4A148C' },
         { name: 'Brown', color: '#795548', border: '#3E2723' },
         { name: 'Green', color: '#4CAF50', border: '#1B5E20' },
-        { name: 'Amber', color: '#FFC107', border: '#FF6F00' },
+        { name: 'Amber', color: '#FFE033', border: '#FF6F00' },
       ],
     };
   },
