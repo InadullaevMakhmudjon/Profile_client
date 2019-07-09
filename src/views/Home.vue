@@ -33,10 +33,10 @@ export default {
       region: 'Ташкент',
       regions: [
         { id: 1, name: 'Ташкент' },
-        { id: 1, name: 'Самарканд' },
-        { id: 1, name: 'Бухара' },
-        { id: 1, name: 'Денау' },
-        { id: 1, name: 'Термез ' }
+        { id: 2, name: 'Самарканд' },
+        { id: 3, name: 'Бухара' },
+        { id: 4, name: 'Денау' },
+        { id: 5, name: 'Термез ' },
       ],
     };
   },
