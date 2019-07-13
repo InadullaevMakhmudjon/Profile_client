@@ -11,7 +11,7 @@ export function execute(promise) {
 }
 
 export const AXIOS = axios.create({
-  baseURL: 'http://localhost:3031/api/',
+  baseURL: 'http://192.168.0.109/api',
 });
 
 export default () => {
